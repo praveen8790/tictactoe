@@ -11,6 +11,26 @@ public class TicTacToe {
         System.out.println("---------");
         System.out.println(board[7] + " | " + board[8] + " | " + board[9]);
     }
+    public char choose(){
+
+        char player='a';
+        char computer='a';
+        while(player != 'X' && player != 'O'){
+            System.out.println("choose X or O");
+            player = scanner.next().charAt(0);
+            switch(player){
+                case 'X':
+                    computer='O';
+                    break;
+                case 'O':
+                    computer='X';
+                    break;
+
+            }
+        }
+        System.out.println(player);
+        return computer;
+    }
 
 
     public static void main(String[] args) {
